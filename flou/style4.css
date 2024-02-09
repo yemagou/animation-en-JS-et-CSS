@@ -1,0 +1,29 @@
+body{
+    margin: 0%;/*pas de marge extérieur*/
+    padding: 0%;/*pas de marge intérieur*/
+    height: 80vh;/*hauteur*/
+    background: lightblue;/*couleur de fond*/
+    display: flex;/*afficher un éléments comme un conteneur de niveau bloque*/
+    justify-content: center;/*positionnement des éléments au centre*/
+    align-items: center;/*positionnement des éléments au centre*/
+    font-family: sans-serif;/*police standard*/
+}
+.box{
+    width: 150px;/*lageur*/
+    height: 30px;/*hauteur*/
+    text-align: center;/*texte positionné au centre*/
+    justify-content: center;/*contenu positionné au centre*/
+    background: #f1f1f1;/*couleur de fond*/
+    border: 1px solid #d6d6d6;/*définition de la bordure*/
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);/*définition des bordures d'ombre*/
+    border-radius: 15px;/*arrondi des bordures*/
+    transition: 0.3s all;/*permet de définr la durée de la transition sur la classe box*/
+    margin: 30px;/*définition des marges*/
+    cursor: pointer;/*effet du curseur*/
+}
+.flou{
+    filter: blur(3px);/*permet d'appliquer un filtre de flou*/
+    opacity: 0.5;/*transparence*/
+    transform: scale(0.98);/*permet de baisser les éléments qui ont la classe flou*/
+    box-shadow: none;/*pas de bordure d'ombre*/
+}

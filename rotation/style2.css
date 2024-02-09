@@ -1,0 +1,63 @@
+body{
+    margin: 0%;/*pas de marge extérieur*/
+    padding: 0%;/*pas de marge intérieur*/
+    background: #626262;/*couleur de fond*/
+    font-family: 'poppins', sans-serif;/*définition de la police*/
+    height: 80vh;/*hauteur de 80pourcent de la hauteur d'écran*/
+    display: flex;/*affiche un élément comme un conteneur de niveau block*/
+    justify-content: center;/*Les éléments sont positionnés au centre du body*/
+    align-items: center;/*Les éléments sont positionnés au centre du body*/
+}
+.block{
+    margin-top: 11%;/*marge extérieur du haut*/
+    width: 280px;/*largeur de la classe block*/
+    height: 500px;/*hauteur de la classe block*/
+    padding-bottom: 90px;/*margeur intérieur du bas*/
+    background: #333;/*couleur de fond*/
+    cursor: pointer;/*effet du curseur*/
+    transition:background 0.4s linear;/* permet de définir la durée de la transition sur le fond de l'image*/
+}
+.photo{
+    height: 45%;/*hauteur de la classe photo*/
+    display: flex;/*affiche un élément comme un conteneur de niveau block*/
+    justify-content: center;/*Les éléments sont positionnés au centre de la classe photo*/
+    align-items: center;/*Les éléments sont positionnés au centre de la classe photo*/
+    border-bottom: 1px solid gold;/*définition de la bordure du bas*/
+}
+.cercle{
+    width: 150px;/*largeur*/
+    height: 150px;/*hauteur*/
+    border-radius: 50%;/*arrondis des bordures*/
+    background: gold;/*couleur de fond*/
+    display: flex;/*affiche un élément comme un conteneur de niveau block*/
+    justify-content: center;/*Les éléments sont positionnés au centre*/
+    align-items: center;;/*Les éléments sont positionnés au centre*/
+    transition: background 0.4s linear;/* permet de définir la durée de la transition sur le fond de l'image*/
+}
+.photo .cercle svg{
+    width: 80px;/*largeur de l'image*/
+    fill: #333;/* permet de définir la couleur de remplissage d'une forme svg (image)*/
+}
+h2{
+    text-align: center;/*le titre sera au centre*/
+    color: #f1f1f1;/*couleur du titre*/
+    transition: 0.4s linear color;/* permet de définir la durée du survol sur la couleur du titre qui s'appliquera tout le long du temps mis */
+}
+.texte{
+    color: #f1f1f1;/*couleur du texte*/
+    font-size: 18px;/*taille du texte*/
+    padding: 20px;/*définition des marges intérieurs*/
+    text-align: justify;/*le texte sera justifié*/
+    transition: 0.4s color linear;/* permet de définir la durée du survol sur la couleur du texte qui s'appliquera tout le long du temps mis */
+}
+.block:hover{
+    background: #f5cb22;/*couleur de fond*/
+}
+.block:hover .cercle{
+    background: #333;/*couleur de foond*/
+}
+.block:hover .cercle svg{
+    transition: 0.4s all linear;/* permet de définir la durée du survol sur l'image qui s'appliquera tout le long du temps mis */
+    fill: gold;/*permet de définir la couleur de remplissage d'une forme svg (image)*/
+    transform: rotateY(360deg);/* permet de faire une rotation de 360dégré à l'élément selectionné*/
+}

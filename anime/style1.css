@@ -1,0 +1,53 @@
+*, ::before, ::after{
+    box-sizing: border-box;/*permet de prendre en compte le remplissage et les bordures dans le calcul de la largeur et de la hauteur*/
+}
+body{
+    margin: 0%;/*pas de marge extérieur*/
+    padding: 0%;/*pas de marge intérieur*/
+    background: #333;/*couleur de fond*/
+    font-family: 'poppins', sans-serif;/*définition de la police*/
+    height: 80vh;/*hauteur de 80pourcent de la hauteur d'écran*/
+    display: flex;/*: affiche un élément comme un conteneur de niveau block*/
+    justify-content: center;/*Les éléments sont positionnés au centre du body*/
+    align-items: center;/*Les éléments sont positionnés au centre du body*/
+}
+.block{
+    background: white;/*fond de couleur blanc*/
+    width: 400px;/*largeur de la classe block*/
+    height: 200px;/*hauteur de la classe block*/
+    border-radius: 5px;/*arrondis*/
+    flex-shrink: 0;/*permet de ne pas reduire le contenu de notre classe block*/
+    position: relative;/*définition de la position*/
+}
+h2{
+    text-align: center;/*le texte sera aligné au centre*/
+    position: relative;/*définition de la position*/
+}
+h2::before{
+    content: "’’";/*permet de mettre un contenu à l'effet voulu*/
+    font-size: 90px;/*taile de l'effet au survole*/
+    position: absolute;/*définition de la position*/
+    top: -45px;/*position absolue du haut*/
+    left: 5px;/*position absolue de gauche*/
+}
+h2::after{
+    content: "’’";/*permet de mettre un contenu à l'effet voulu*/
+    font-size: 90px;/*taille de la police*/
+    position: absolute;/*définition de la position*/
+    bottom: 22px;/*position absolue du bas*/
+    right: 5px;/*position absolue de droite*/
+}
+span{
+    position: absolute;/*définition de la position*/
+    bottom: 5px;/*position absolue du bas*/
+    right: 15px;/*position absolue de droite*/
+}
+.block{
+    background: rgb(245, 105, 62);/*couleur de fond*/
+    box-shadow: 0px 200px 100px -100px white inset;/*bordure d'ombre à l'intérieur avec une couleur blanche*/
+    transition: background 1s ease, box-shadow 1s ease;/*permet de faire une transition lente du fond et des bordures des ombres*/
+}
+.block:hover{
+    background: #b993d6;/*couleur de fond*/
+    box-shadow: 0 200px 100px -100px #8ca6db inset;/*bordure d'ombre à l'intérieur avec une couleur #8ca6db*/
+}

@@ -1,0 +1,144 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;/*afficher un éléments comme un conteneur de niveau bloque*/
+    justify-content: center;/*positionnement des éléments au centre*/
+    align-items: center;/*positionnement des éléments au centre*/
+    height: 70vh;/*haureur*/
+}
+
+.block{
+    display: flex;/*afficher un éléments comme un conteneur de niveau bloque*/
+    justify-content: center;/*positionnement des éléments au centre*/
+    align-items: center;/*positionnement des éléments au centre*/
+    position: relative;/*positon du contenu de la classe block*/
+    width: 250px;/*largeur*/
+    height: 250px;/*hauteur*/
+    border-radius: 75px;/*arrondis des bodures*/
+    font-family: 'montserrat', sans-serif;/*police du contenu*/
+    font-size: 20px;/*taille de la police*/
+    letter-spacing: 2px;/*permet de laisser un espace entre les lettres*/
+    transform: 1s box-shadow;
+    cursor: pointer;/*effet du curseur*/
+    background: white;/*couleur de fond*/
+    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.25);/*définition des bordures d'ombres*/
+}
+
+.block:hover{
+    box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.1);/*définition des bordures d'ombres*/
+}
+
+.block:hover::before, .block:hover::after{
+    display: block;/*afficher un éléments comme un conteneur de niveau bloque*/
+    content: '';/*contenu*/
+    position: absolute;/*positon du contenu*/
+    width: 100%;/*largeur*/
+    height: 100%;/*hauteur*/
+    background: #fda8cf;/*couleur de fond*/
+    border-radius: 75px;/*arrondis de bordures*/
+    z-index: -1;/*ordre d'affichage en cas de superposition*/
+    animation: 1s danslesens infinite;/*définition du nom de l'animation, de la durée et la fonction*/
+}
+
+.block:hover::after{
+    background: #f3ce5e;/*couleur de fond*/
+    animation: 2s inverse infinite;/*définition du nom de l'animation, de la durée et la fonction*/
+}
+
+@keyframes danslesens{
+    
+    0%{
+        top: -5px;
+        left: 0px;
+    }
+
+    12%{
+        top: -2px;
+        left: 2px;
+    }
+
+    25%{
+        top: 0px;
+        left: 5px;
+    }
+
+    37%{
+        top: 2px;
+        left: 2px;
+    }
+
+    50%{
+        top: 5px;
+        left: 0px;
+    }
+
+    62%{
+        top: 2px;
+        left: -2px;
+    }
+
+    75%{
+        top: 0px;
+        left: -5px;
+    }
+
+    87%{
+        top: -2px;
+        left: -2px;
+    }
+
+    100%{
+        top: -5px;
+        left: 0px;
+    }
+}
+
+@keyframes inverse{
+    
+    0%{
+        top: -5px;
+        left: 0px;
+    }
+
+    12%{
+        top: -2px;
+        left: 2px;
+    }
+
+    25%{
+        top: 0px;
+        left: 5px;
+    }
+
+    37%{
+        top: 2px;
+        left: 2px;
+    }
+
+    50%{
+        top: 5px;
+        left: 0px;
+    }
+
+    62%{
+        top: 2px;
+        left: -2px;
+    }
+
+    75%{
+        top: 0px;
+        left: -5px;
+    }
+
+    87%{
+        top: -2px;
+        left: -2px;
+    }
+
+    100%{
+        top: -5px;
+        left: 0px;
+    }
+}

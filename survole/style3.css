@@ -1,0 +1,62 @@
+body{
+    margin: 0%;/*pas de marge extérieur*/
+    padding: 0%;/*pas de marge intérieur*/
+    height: 80vh;/*hauteur*/
+    background: lightblue;/*couleur de fond*/
+    display: flex;/*afficher un éléments comme un conteneur de niveau bloque*/
+    justify-content: center;/*positionnement des éléments au centre*/
+    align-items: center;/*positionnement des éléments au centre*/
+    font-family: sans-serif;/*police standard*/
+}
+.survole{
+    margin: 20px;/*définition des marges extérieurs*/
+    width: 160px;/*définnition des marges intérieurs*/
+    height: 45px;/*hauteur*/
+    display: flex;/*afficher un éléments comme un conteneur de niveau bloque*/
+    justify-content: center;/*positionnement des éléments au centre*/
+    align-items: center;/*positionnement des éléments au centre*/
+    cursor: pointer;/*effet du curseur*/
+    font-size: 20px;/*taille de la police*/
+    color: #3f3f3f;/*coulreur de l'élément */
+}
+.l1{
+    border: 2px solid #f1f1f1;/*définition de la bordure*/
+    position: relative;/*positionnement de l'élément*/
+    overflow: hidden;/*flottant*/
+}
+.l1::before{
+    content: '';/*utile pour les pseudo éléments*/
+    position: absolute;/*poition de élément*/
+    width: 200px;/*largeur*/
+    height: 20px;/*hauteur*/
+    background: rgba(255, 255, 255, 0.4);/*couleur de fond*/
+    transform: rotate(-45deg);
+    left: -150px;/*position à gauche*/
+}
+.l1:hover::before{
+    transition:  transform 0.8s linear;/* permet de faire une transition lente sur transform de manière linéaire*/
+    transform: translateX(500px) rotate(-45deg);/*los du survole on aura une rotation de -45deg par rapport à 500px sur l'axe des x*/
+}
+
+.l2{
+    border: 2px solid #f1f1f1;/*définition de la bordure*/
+    box-shadow: 0 0 0 0 #f1f1f1 inset;/*définiton de la bordue d'ombre*/
+    position: relative;/*postionnement des eléments*/
+    transition: box-shadow 0.3s linear;/*permet de faire une transition linéaire de 0.3s sur box-shadow*/
+}
+.l2::before{
+    content: '';
+    position: absolute;/*postionnement des eléments*/
+    width: 100%;/*largeur*/
+    height: 100%;/*hauteur*/
+    border: 2px solid #f1f1f1;/*définition de la bordure*/
+}
+.l2:hover{
+    box-shadow: 0 0 50px -20px #f1f1f1 inset;/*définition de la bordure d'ombre*/
+}
+.l2:hover::before{
+    transition: all 0.3s linear;/*permet de faire une transition linéaire de 0.3s sur tout l'élément lors du survole*/
+    width: 120%;/*largeur*/
+    height: 150%;/*hauteur*/
+    border: 2px solid transparent;/*définition de la bodure*/
+}

@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;/*permet de prendre en compte le remplissage et les bordures dans le calcul de la largeur et de la hauteur*/
+}
+body{
+    margin: 0%;/*aucune marge extérieur*/
+    padding: 0%;/*aucune marge intérieur*/
+    background: #f1f1f1;/*couleur de fond*/
+    font-family: sans-serif;/*police par défaut*/
+}
+.block{
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;/*une marge extérieure de 100px pour le haut et bas et une marge auto pour la gauche et la droite*/
+    position: relative; /*la position du block sera relative*/
+}
+.contenu{
+    width: 100%;/*définition de la largeur*/
+    height: 100%;/*définition de la hauteur*/
+    padding: 30px;/*valeur de 30px pour les marges intérieurs*/
+    transition: 0.25s ease-in-out;/* permet de faire une transition lente au début et à la fin*/
+    border: 2px solid black;/*définition des bordures*/
+    background: white;/*couleur de fond blanc pour la class contenu*/
+}
+.text{
+    margin: 30px;/*valeur de 30px pour les marges extérieurs*/
+}
+.bordure{
+    position: absolute;/*définition de la position*/
+    width: 100%;/*définition de la largeur*/
+    height: 100%;/*définition de la hauteur*/
+    border: 2px dashed black;/*définition des bordures*/
+    top: 0; /*position absolue du haut*/
+    z-index: -1;/*la classe bordure sera afficher après contenu*/
+}
+.contenu:hover{
+    transform: translate(-20px,-20px);/*permet de faire décoler la classe contenu de -20px sur l'axe des x et de -20px sur l'axe des y*/
+}
